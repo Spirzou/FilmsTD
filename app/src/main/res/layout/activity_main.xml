@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#95A7A5"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/labelFilm"
+        android:layout_width="102dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="75dp"
+        android:text="Film Ajout"
+        app:layout_constraintBottom_toTopOf="@+id/listeFilms"
+        app:layout_constraintEnd_toStartOf="@+id/inputFilm"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/inputFilm"
+        android:layout_width="142dp"
+        android:layout_height="47dp"
+        android:layout_marginEnd="31dp"
+        android:ems="10"
+        android:hint="Le titre du film"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toStartOf="@+id/butFilm"
+        app:layout_constraintStart_toEndOf="@+id/labelFilm"
+        app:layout_constraintTop_toTopOf="@+id/butFilm" />
+
+    <Button
+        android:id="@+id/butFilm"
+        style="@android:style/Widget.Material.Light.Button.Toggle"
+        android:layout_width="51dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="70dp"
+        android:background="#00B0FF"
+        android:rotationX="2"
+        android:text="+"
+        app:layout_constraintBottom_toTopOf="@+id/listeFilms"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/inputFilm"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ListView
+        android:id="@+id/listeFilms"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="37dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/butFilm" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
